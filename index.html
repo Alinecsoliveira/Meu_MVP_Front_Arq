@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="title">
+            <img src="img/pokebola.png" height="30">
+            <h1>Pokédex</h1>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner-area">
+        <img src="img/banner.jpg" alt="Banner Pokémon">
+    </div>
+
+    <!-- Cadastro -->
+    <section class="newItem">
+        <h2>Cadastrar Pokémon</h2>
+        <input type="text" id="nome" placeholder="Nome do Pokémon">
+        <input type="text" id="tipo" placeholder="Tipo">
+        <input type="number" id="nivel" placeholder="Nível">
+        <button onclick="newItem()" class="addBtn">
+            <img src="img/add.png" alt="Adicionar" width="20" style="vertical-align: middle;">
+        </button>
+        <div id="cadastroResult"></div>
+    </section>
+
+    <!-- Listagem -->
+    <section class="items">
+        <h2>Lista de Pokémons</h2>
+        <table id="myTable">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Nível</th>
+                <th>Ações</th>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Buscar -->
+    <section>
+        <h2>Buscar Pokémon por ID</h2>
+        <input type="number" id="buscarId" placeholder="Digite o ID">
+        <button onclick="buscarPokemon()">Buscar</button>
+        <div id="buscarResult"></div>
+    </section>
+
+    <!-- Atualizar -->
+    <section>
+        <h2>Atualizar Pokémon</h2>
+        <input type="number" id="updateId" placeholder="ID do Pokémon">
+        <input type="text" id="updateNome" placeholder="Novo Nome">
+        <input type="text" id="updateTipo" placeholder="Novo Tipo">
+        <input type="number" id="updateNivel" placeholder="Novo Nível">
+        <button onclick="updatePokemon()">Atualizar</button>
+        <div id="updateResult"></div>
+    </section>
+
+    <!-- API Externa -->
+    <section>
+        <h2>Buscar Pokémon na PokéAPI</h2>
+        <input type="text" id="buscarNomeExterno" placeholder="Nome do Pokémon">
+        <button onclick="buscarPokemonExterno()">Buscar na PokéAPI</button>
+        <div id="buscarExternoResult"></div>
+    </section>
+
+    <!-- Importa o JS revisado -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
+
+
+
