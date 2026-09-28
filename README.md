@@ -29,7 +29,6 @@ docker run -p 8080:80 pokedex-frontend
 
 3. Acesse a aplicação no navegador:
 
-Código
 http://127.0.0.1:8080
 
 ## 📂 Estrutura
